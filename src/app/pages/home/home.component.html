@@ -1,15 +1,14 @@
-<header>
-  <app-menu-bar></app-menu-bar>
-</header>
+
 
 <app-menu-title></app-menu-title>
 <div class="container__articles">
   <div class="articles__main">
-    <app-big-card></app-big-card>
+    <app-big-card foto="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+    titulo="Pokemons"
+    descricao="Bulbasaur"
+    ></app-big-card>
   </div>
-  <div class="articles__others">
-    <app-small-card></app-small-card>
-    <app-small-card></app-small-card>
-    <app-small-card></app-small-card>
+  <div class="articles__others"  >
+    <app-small-card *ngFor="let pokemon of pokemons"  index={{pokemon.id}}  nome={{pokemon.nome}}  foto={{pokemon.foto}}  ></app-small-card>
   </div>
 </div>
